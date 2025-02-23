@@ -22,6 +22,9 @@ from sgpt.utils import (
     run_command,
 )
 
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning,
+module="pydantic._internal._config")
 
 def main(
     prompt: str = typer.Argument(
